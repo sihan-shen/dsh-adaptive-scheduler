@@ -25,6 +25,7 @@
   },
   "scripts": {
     "build": "tsc -b",
+    "prepare": "pnpm run build",
     "typecheck": "tsc -b",
     "test": "vitest run",
     "test:package-entry": "pnpm run build && pnpm exec vitest run tests/package-entry.spec.ts"
@@ -34,13 +35,15 @@
       "patch": "./cordis.patch.yml"
     }
   },
+  "dependencies": {
+    "@ds-plugins/dsh-scheduling-contracts": "git+https://github.com/sihan-shen/DS-Plugins.git#d5d1caa61bf8e38d8b9946176bf02b63545aca9c&path:/packages/dsh-scheduling-contracts"
+  },
   "peerDependencies": {
     "@deepseek-ai/cordis": "4.0.1",
     "@ds-plugins/dsh-scheduling-contracts": "^0.3.0"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "4.0.1",
-    "@ds-plugins/dsh-scheduling-contracts": "^0.3.0",
     "typescript": "5.9.3",
     "vitest": "4.0.18"
   }
