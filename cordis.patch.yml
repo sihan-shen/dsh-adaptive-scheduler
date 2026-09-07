@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-adaptive-scheduler
+      name: '@ds-plugins/dsh-adaptive-scheduler'
