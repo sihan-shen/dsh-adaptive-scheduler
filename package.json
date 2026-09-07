@@ -2,6 +2,11 @@
   "name": "@ds-plugins/dsh-adaptive-scheduler",
   "version": "0.3.0",
   "description": "Bounded adaptive route selection and escalation for DeepSeek Harness",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sihan-shen/dsh-adaptive-scheduler.git"
+  },
+  "homepage": "https://github.com/sihan-shen/dsh-adaptive-scheduler#readme",
   "packageManager": "pnpm@11.7.0",
   "engines": {
     "node": "^22.19.0 || >=24"
@@ -25,7 +30,7 @@
   },
   "scripts": {
     "build": "tsc -b",
-    "prepare": "pnpm run build",
+    "prepack": "pnpm run build",
     "typecheck": "tsc -b",
     "test": "vitest run",
     "test:package-entry": "pnpm run build && pnpm exec vitest run tests/package-entry.spec.ts"
@@ -36,7 +41,7 @@
     }
   },
   "dependencies": {
-    "@ds-plugins/dsh-scheduling-contracts": "git+https://github.com/sihan-shen/DS-Plugins.git#e4c98c4e278695d29fb1a09aa9dce23f10d064d2&path:/packages/dsh-scheduling-contracts"
+    "@ds-plugins/dsh-scheduling-contracts": "^0.3.0"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "4.0.1",
