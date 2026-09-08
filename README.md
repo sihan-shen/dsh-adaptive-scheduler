@@ -4,6 +4,8 @@ An out-of-tree [DeepSeek Harness (DSH)](https://github.com/deepseek-ai/DeepSeek-
 
 This package is developed in the [`sihan-shen/DS-Plugins`](https://github.com/sihan-shen/DS-Plugins) monorepo. The source is also prepared for the standalone public repository [`sihan-shen/dsh-adaptive-scheduler`](https://github.com/sihan-shen/dsh-adaptive-scheduler).
 
+当前开发重点在dsh-code-intelligence项目，其他项目迭代暂停。
+
 ## Compatibility and availability
 
 - DSH / Cordis: `@deepseek-ai/cordis` **4.0.2**. This scheduler does not import DSH runtime APIs.
