@@ -6,7 +6,8 @@ This package is developed in the [`sihan-shen/DS-Plugins`](https://github.com/si
 
 ## Compatibility and availability
 
-- DSH / Cordis: `@deepseek-ai/cordis` **4.0.1**.
+- DSH / Cordis: `@deepseek-ai/cordis` **4.0.2**. This scheduler does not import DSH runtime APIs.
+- DSH source availability: target packages are reviewed at upstream commit [`a66e4702047846cdaa10c66c9d3df3951f5ea70d`](https://github.com/deepseek-ai/DeepSeek-Harness/commit/a66e4702047846cdaa10c66c9d3df3951f5ea70d) for DSH `0.1.2-rc.1`.
 - Scheduling contracts: `@han_05/dsh-scheduling-contracts` **^0.3.0** (required peer dependency).
 - Source repository: public once `sihan-shen/dsh-adaptive-scheduler` is pushed.
 - npm package: publication is intentionally blocked until the matching public `@han_05/dsh-scheduling-contracts` release exists. Do not treat the standalone repository as an npm-installable release before that prerequisite is met.
@@ -16,7 +17,7 @@ This package is developed in the [`sihan-shen/DS-Plugins`](https://github.com/si
 After the two peer dependencies are available from your package source:
 
 ```sh
-npm install @han_05/dsh-adaptive-scheduler @han_05/dsh-scheduling-contracts @deepseek-ai/cordis@4.0.1
+npm install @han_05/dsh-adaptive-scheduler @han_05/dsh-scheduling-contracts @deepseek-ai/cordis@4.0.2
 ```
 
 Add the plugin to a Cordis / DSH patch. `cordis.patch.yml` in this package contains a complete example configuration. The plugin registers the service name `adaptiveScheduler` and observes `agent/request-error` plus `session/disposed` events.

@@ -1,3 +1,4 @@
+import { readFile } from 'node:fs/promises'
 import { describe, expect, it } from 'vitest'
 
 describe('published adaptive scheduler package entry', () => {
@@ -9,5 +10,9 @@ describe('published adaptive scheduler package entry', () => {
     expect(entry.name).toBe('dsh-adaptive-scheduler')
     expect(entry.provide).toEqual(['adaptiveScheduler'])
     expect(entry.inject).toEqual([])
+
+    const manifest = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'))
+    expect(manifest.peerDependencies['@deepseek-ai/cordis']).toBe('4.0.2')
+    expect(manifest.devDependencies['@deepseek-ai/cordis']).toBe('4.0.2')
   })
 })
