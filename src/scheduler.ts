@@ -1,5 +1,5 @@
-import { parseBudgetViewV1, parseCapabilityRequestV1, parseScheduleDecisionV1, parseScheduleFeedbackV1 } from '@ds-plugins/dsh-scheduling-contracts'
-import type { BudgetViewV1, CapabilityRequestV1, RouteDecisionV1, ScheduleDecisionV1, ScheduleFeedbackV1 } from '@ds-plugins/dsh-scheduling-contracts'
+import { parseBudgetViewV1, parseCapabilityRequestV1, parseScheduleDecisionV1, parseScheduleFeedbackV1 } from '@han_05/dsh-scheduling-contracts'
+import type { BudgetViewV1, CapabilityRequestV1, RouteDecisionV1, ScheduleDecisionV1, ScheduleFeedbackV1 } from '@han_05/dsh-scheduling-contracts'
 import { classifyTaskType, resolveCatalogCandidate, strongestAllowedAlias } from './catalog.js'
 import { BoundedPerformanceHistory } from './history.js'
 import { SchedulerStateStore } from './state.js'

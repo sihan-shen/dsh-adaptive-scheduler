@@ -1,4 +1,4 @@
-# `@ds-plugins/dsh-adaptive-scheduler`
+# `@han_05/dsh-adaptive-scheduler`
 
 An out-of-tree [DeepSeek Harness (DSH)](https://github.com/deepseek-ai/DeepSeek-Harness) / Cordis plugin that provides an `adaptiveScheduler` service. It makes bounded, deterministic route-selection and escalation decisions from a configured route catalog; it does not implement providers, credentials, OAuth, network calls, or a UI.
 
@@ -7,16 +7,16 @@ This package is developed in the [`sihan-shen/DS-Plugins`](https://github.com/si
 ## Compatibility and availability
 
 - DSH / Cordis: `@deepseek-ai/cordis` **4.0.1**.
-- Scheduling contracts: `@ds-plugins/dsh-scheduling-contracts` **^0.3.0** (required peer dependency).
+- Scheduling contracts: `@han_05/dsh-scheduling-contracts` **^0.3.0** (required peer dependency).
 - Source repository: public once `sihan-shen/dsh-adaptive-scheduler` is pushed.
-- npm package: publication is intentionally blocked until the matching public `@ds-plugins/dsh-scheduling-contracts` release exists. Do not treat the standalone repository as an npm-installable release before that prerequisite is met.
+- npm package: publication is intentionally blocked until the matching public `@han_05/dsh-scheduling-contracts` release exists. Do not treat the standalone repository as an npm-installable release before that prerequisite is met.
 
 ## Installation
 
 After the two peer dependencies are available from your package source:
 
 ```sh
-npm install @ds-plugins/dsh-adaptive-scheduler @ds-plugins/dsh-scheduling-contracts @deepseek-ai/cordis@4.0.1
+npm install @han_05/dsh-adaptive-scheduler @han_05/dsh-scheduling-contracts @deepseek-ai/cordis@4.0.1
 ```
 
 Add the plugin to a Cordis / DSH patch. `cordis.patch.yml` in this package contains a complete example configuration. The plugin registers the service name `adaptiveScheduler` and observes `agent/request-error` plus `session/disposed` events.
@@ -26,10 +26,10 @@ Add the plugin to a Cordis / DSH patch. `cordis.patch.yml` in this package conta
 Inside the parent repository:
 
 ```sh
-pnpm --filter @ds-plugins/dsh-scheduling-contracts build
-pnpm --filter @ds-plugins/dsh-adaptive-scheduler typecheck
-pnpm --filter @ds-plugins/dsh-adaptive-scheduler test
-pnpm --filter @ds-plugins/dsh-adaptive-scheduler run test:package-entry
+pnpm --filter @han_05/dsh-scheduling-contracts build
+pnpm --filter @han_05/dsh-adaptive-scheduler typecheck
+pnpm --filter @han_05/dsh-adaptive-scheduler test
+pnpm --filter @han_05/dsh-adaptive-scheduler run test:package-entry
 ```
 
 The standalone repository includes a test-only fixture for the contracts package so its isolated build and tests do not depend on a sibling checkout. Generated files, test coverage, tarballs, and dependencies are intentionally excluded from version control.

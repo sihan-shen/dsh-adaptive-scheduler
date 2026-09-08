@@ -1,4 +1,4 @@
-import type { CapabilityRequestV1, RouteDecisionV1 } from '@ds-plugins/dsh-scheduling-contracts'
+import type { CapabilityRequestV1, RouteDecisionV1 } from '@han_05/dsh-scheduling-contracts'
 import type { AdaptiveSchedulerConfig, CatalogAvailabilityV1, RouteCatalogEntryV1, TaskTypeV1 } from './types.js'
 
 interface CandidateSnapshot {

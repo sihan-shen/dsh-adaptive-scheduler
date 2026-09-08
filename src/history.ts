@@ -1,5 +1,5 @@
-import { parseScheduleFeedbackV1 } from '@ds-plugins/dsh-scheduling-contracts'
-import type { ScheduleFeedbackV1 } from '@ds-plugins/dsh-scheduling-contracts'
+import { parseScheduleFeedbackV1 } from '@han_05/dsh-scheduling-contracts'
+import type { ScheduleFeedbackV1 } from '@han_05/dsh-scheduling-contracts'
 import type { RouteCatalogEntryV1, TaskTypeV1 } from './types.js'
 import type { PendingSelectionV1, PerformanceHistoryOptions, TaskHistoryV1, EvidenceLevelV1 } from './types.js'
 

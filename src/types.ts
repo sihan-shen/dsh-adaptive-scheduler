@@ -1,4 +1,4 @@
-import type { AdaptiveSchedulerService, CapabilityRequestV1, RouteDecisionV1, ScheduleDecisionV1 } from '@ds-plugins/dsh-scheduling-contracts'
+import type { AdaptiveSchedulerService, CapabilityRequestV1, RouteDecisionV1, ScheduleDecisionV1 } from '@han_05/dsh-scheduling-contracts'
 
 export type TaskTypeV1 = 'code-fix' | 'code-new' | 'research' | 'summarize' | 'review' | 'tool-heavy' | 'unknown'
 export type RouteTierV1 = 'baseline' | 'fallback' | 'strong'

@@ -1,4 +1,4 @@
-import type { CapabilityRequestV1, RouteDecisionV1 } from '@ds-plugins/dsh-scheduling-contracts'
+import type { CapabilityRequestV1, RouteDecisionV1 } from '@han_05/dsh-scheduling-contracts'
 import type { AdaptiveSchedulerConfig, ProviderFailureFactV1, RouteSwitchRecordV1, StickyRouteStateV1, WorkerAffinityStateV1, RouteCatalogEntryV1 } from './types.js'
 import { MAX_COOLDOWN_MS } from './config.js'
 

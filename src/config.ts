@@ -1,4 +1,4 @@
-import { MAX_SCHEDULING_IDENTIFIER_BYTES, MAX_SCHEDULING_ITEMS, parseRouteDecisionV1 } from '@ds-plugins/dsh-scheduling-contracts'
+import { MAX_SCHEDULING_IDENTIFIER_BYTES, MAX_SCHEDULING_ITEMS, parseRouteDecisionV1 } from '@han_05/dsh-scheduling-contracts'
 import type { AdaptiveSchedulerConfig, RouteCatalogEntryV1, RouteTierV1, TaskTypeV1 } from './types.js'
 
 export const MAX_STICKY_TTL_MS = 3_600_000
@@ -158,7 +158,7 @@ export function parseAdaptiveSchedulerConfig(value: unknown): AdaptiveSchedulerC
 export const Config = {
   '~standard': {
     version: 1 as const,
-    vendor: '@ds-plugins/dsh-adaptive-scheduler',
+    vendor: '@han_05/dsh-adaptive-scheduler',
     validate(value: unknown) {
       try { return { value: parseAdaptiveSchedulerConfig(value) } } catch (error) {
         return { issues: [{ message: error instanceof Error ? error.message : 'invalid configuration' }] }
